@@ -1,0 +1,22 @@
+.drag-selector {
+  display: grid;
+  height: 60vh;
+  border: 1px solid black;
+  width: clamp(3rem, 10vw, 7rem);
+  border-radius: 0.25rem;
+  grid-template-rows: repeat(auto, 1fr);
+  overflow: hidden;
+}
+
+.time-section {
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+
+.drag-selector:last-child {
+  border-bottom: none;
+}
+
+.selected-time {
+  background: var(--color-accent);
+}

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../styles/newevent.css";
-import { weekdays } from "../constants/day-data";
+import DaysInput from "../components/DaysInput";
+import NameInput from "../components/NameInput";
+import TimeInput from "../components/TimeInput";
 
 const NewEvent = () => {
   const [selectedDays, setSelectedDays] = useState([]);
@@ -20,48 +22,13 @@ const NewEvent = () => {
       <Title />
       <NameInput />
       <DaysInput selectedDays={selectedDays} handleDayClick={handleDayClick} />
+      <TimeInput />
     </div>
   );
 };
 
 const Title = () => {
   return <h1 className="title">Create a New Event</h1>;
-};
-
-const NameInput = () => {
-  return (
-    <form className="form-card">
-      <div className="label-container">
-        <label className="name-label">New Event</label>
-      </div>
-      <input type="text" id="name-input" placeholder="Event Name" />
-    </form>
-  );
-};
-
-const DaysInput = ({ selectedDays, handleDayClick }) => {
-  return (
-    <section className="form-card">
-      <div className="header-container">
-        <p>Which Days?</p>
-      </div>
-      <div className="day-cards">
-        {weekdays.map((day, index) => {
-          return (
-            <div
-              key={index}
-              className={
-                selectedDays.includes(day) ? "day-card selected" : "day-card"
-              }
-              onClick={() => handleDayClick(day)}
-            >
-              {day}
-            </div>
-          );
-        })}
-      </div>
-    </section>
-  );
 };
 
 export default NewEvent;

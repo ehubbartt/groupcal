@@ -1,9 +1,10 @@
 :root {
-  --background-color: #323c4e;
+  --background-color: #edf2fb;
   --color1: #3d5a80;
   --color2: #acd0e6;
   --color3: #e0fbfc;
-  --color-accent: #ee6c4d;
+  --color-accent: #06d6a0;
+  --color-accent-hover: #06d69e5d;
 }
 
 * {
@@ -17,7 +18,7 @@ body {
   background: var(--background-color);
   width: 100%;
   height: 100%;
-  font-family: "Sora", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .App {

@@ -13,16 +13,16 @@
 }
 
 .form-card {
-  width: 50%;
-  background: var(--color2);
+  width: 70%;
   border-radius: 0.4rem;
   padding: 3rem;
+  background: whitesmoke;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 1rem;
-  color: var(--background-color);
+  color: black;
   --box-shadow1: #5f5e5d81;
 }
 
@@ -46,7 +46,7 @@
 }
 
 #name-input:hover:not(:focus) {
-  box-shadow: 0 0 0 3px #ee6d4d81;
+  box-shadow: 0 0 0 3px var(--color-accent-hover);
   transform: scale(1.01);
 }
 
@@ -65,6 +65,7 @@
   width: calc(100% - 2rem);
   transition: all 1s ease;
   cursor: pointer;
+  gap: 1rem;
 }
 
 .day-card {
@@ -77,10 +78,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: black;
 }
 
-.day-card:hover {
-  box-shadow: 0 0 0 3px #ee6d4d81;
+.day-card:hover:not(.selected) {
+  box-shadow: 0 0 0 3px var(--color-accent-hover);
 }
 
 .selected {
